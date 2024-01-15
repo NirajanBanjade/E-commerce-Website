@@ -1,5 +1,6 @@
 import {Container,Row,Col} from "react-bootstrap"
 import React from 'react'
+import '../styling/header.css'
 
 const Footer = () => {
     const currYear= new Date().getFullYear();
@@ -8,7 +9,7 @@ const Footer = () => {
         <Container>
             <Row >
                 <Col className="text-center py-3">
-                    <p> NStore &copy; {currYear}</p>
+                    <p className="foot"> NStore &copy; {currYear}</p>
                 </Col>
 
             </Row>

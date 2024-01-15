@@ -2,8 +2,10 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import React from "react";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 import { FaUserTie } from "react-icons/fa";
-import '../styling/header.css'
-import logo from '../styling/logo2.png'
+import '../styling/header.css';
+import logo from '../styling/logo2.png';
+import {LinkContainer} from 'react-router-bootstrap';
+
 
 const Header = () => {
   const radiusNav = {
@@ -23,20 +25,27 @@ const Header = () => {
         style={radiusNav}
       >
         <Container className="container">
-          <Navbar.Brand href="/">
-            <img src={logo} alt="No image" height="50px" width="50px"></img>
+          <LinkContainer to="/">
+          <Navbar.Brand >
+            <img src={logo} alt="NoImage" height="50px" width="50px"></img>
             
             My Home</Navbar.Brand>
+            </LinkContainer>
+            {/* Linkontainer are used in place of a href to link the {link} with the page to render */}
           <Navbar.Toggle aria-controls="collapse-navbar" />
           <Navbar.Collapse id="collapse-navbar">
             <Nav className="ms-auto">
-              <Nav.Link href="/cart">
+              <LinkContainer to="/cart">
+              <Nav.Link className="custom-link">
                 <HiMiniShoppingCart /> ShopCart
               </Nav.Link>
-              <Nav.Link href="/login">
+              </LinkContainer>
+              <LinkContainer to="/login">
+              <Nav.Link className="custom-link">
                 <FaUserTie />
                 Sign In
               </Nav.Link>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -2,6 +2,8 @@ import { Container } from 'react-bootstrap';
 import Header from './components/header';
 import React from 'react'
 import Footer from './components/footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Mainscreen from './MAINSCREEN/mainScreen';
 
 
 const App = () => {
@@ -10,12 +12,15 @@ const App = () => {
       <Header/>
       <main className='py-3'>
         <Container>
-        Welcome to the future
+     
+        <Mainscreen/>
 
         </Container>
+        
        
       </main>
       <Footer/>
+      
     
   
     </>
