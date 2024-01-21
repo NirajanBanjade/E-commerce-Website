@@ -1,6 +1,5 @@
 import {Container,Row,Col} from "react-bootstrap"
 import React from 'react'
-import '../styling/header.css'
 
 const Footer = () => {
     const currYear= new Date().getFullYear();

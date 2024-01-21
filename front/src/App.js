@@ -3,7 +3,9 @@ import Header from './components/header';
 import React from 'react'
 import Footer from './components/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Mainscreen from './MAINSCREEN/mainScreen';
+// import Mainscreen from './MAINSCREEN/mainScreen';
+import { Outlet } from 'react-router-dom';
+
 
 
 const App = () => {
@@ -13,7 +15,8 @@ const App = () => {
       <main className='py-3'>
         <Container>
      
-        <Mainscreen/>
+        <Outlet/>
+      
 
         </Container>
         

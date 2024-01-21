@@ -11,7 +11,7 @@ const List=[
         category: 'Electronics',
         price: 99.99,
         countStock: 131,
-        rating: 4.8,
+        rating: 4,
         numReviews: 23,
 
     },
@@ -26,7 +26,7 @@ const List=[
         category: 'Electronics',
         price: 134.99,
         countStock: 234,
-        rating: 4.7,
+        rating: 4.5,
         numReviews: 101,
 
     },
@@ -40,7 +40,7 @@ const List=[
         category: 'Electronics',
         price: 399.99,
         countStock: 31,
-        rating: 4.9,
+        rating: 4.5,
         numReviews: 12,
 
     },
@@ -69,7 +69,7 @@ const List=[
         price: 1099.99,
         countStock: 171,
         rating: 5.0,
-        numReviews: 123,
+        numReviews: 13,
 
     },
     {
@@ -83,7 +83,7 @@ const List=[
         price: 99.99,
         countStock: 131,
         rating: 4.8,
-        numReviews: 13456,
+        numReviews: 16,
 
     },
     {
@@ -97,7 +97,7 @@ const List=[
         price: 1499.99,
         countStock: 16,
         rating: 5,
-        numReviews: 1234,
+        numReviews: 14,
 
     }
 ];

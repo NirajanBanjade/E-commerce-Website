@@ -4,36 +4,28 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Productdetail from './MAINSCREEN/productdetail';
+import Mainscreen from './MAINSCREEN/mainScreen';
 
 
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider
-
+  BrowserRouter as Router,
+  Routes,
+  Route
 } from 'react-router-dom';
-/* it is the modules that are needed for creating the routing */
 
-import Mainscreen from './MAINSCREEN/mainScreen';
+const root = document.getElementById('root');
 
-/*This is to create a router in webbrowser */
-const router=createBrowserRouter(
-  createRoutesFromElements(
-
-    <Route path="/" element={<App/>} >
-      {/* The route is used to create the route link to render and nested route is for multi level routing. */}
-       <Route index={true} path="/" element={<Mainscreen/>} />
-       {/*Path means the pathfile, and element is the element to render on that path . */}
-    </Route>
-  )
-)
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>{/*The first router is prop (variable) and second is prop name(passed). */}
-    {/*The wrapper is routerProvider to make the functionality of routing. */}
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index={true} element={<Mainscreen />} />
+          <Route path="/product/:id" element={<Productdetail/>} />
+        </Route>
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 

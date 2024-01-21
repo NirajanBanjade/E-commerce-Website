@@ -2,9 +2,10 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import React from "react";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 import { FaUserTie } from "react-icons/fa";
-import '../styling/header.css';
+import '../style/index.css';
 import logo from '../styling/logo2.png';
 import {LinkContainer} from 'react-router-bootstrap';
+
 
 
 const Header = () => {
