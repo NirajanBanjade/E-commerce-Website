@@ -7,6 +7,7 @@ import Rating from '../components/rating';
 
 
 
+
 const Productdetail = () => {
   const {id: productId}=useParams();
   /* The id:product assing name of id as productId */
@@ -33,12 +34,13 @@ const Productdetail = () => {
     
               </ListGroup.Item>
               <ListGroup.Item>
-                <Rating value={product.rating} text={`${product.numReviews} reviews`}/>
+                <Rating actualRating={product.rating} text={`${product.numReviews} reviews`}/>
                 {console.log(product.rating)}
               </ListGroup.Item>
             </ListGroup>
             <ListGroup>
               <ListGroupItem>Price: ${product.price}</ListGroupItem>
+              <ListGroup.Item>{product.description}</ListGroup.Item>
             </ListGroup>
             
           </Col>
