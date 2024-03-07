@@ -514,7 +514,13 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  -webkit-appearance: button;
+  /* -webkit-appearance: button; */
+      appearance: button;
+    /* Vendor prefixes for compatibility */
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -ms-appearance: button;
+    -o-appearance: button;
 }
 button:not(:disabled),
 [type='button']:not(:disabled),
@@ -572,7 +578,8 @@ legend + * {
 
 [type='search'] {
   outline-offset: -2px;
-  -webkit-appearance: textfield;
+  appearance: textfield;
+
 }
 
 /* rtl:raw:

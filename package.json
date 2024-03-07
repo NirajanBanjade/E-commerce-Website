@@ -15,8 +15,16 @@
     "scheduler": "^0.23.0"
   },
   "scripts": {
-    "start": "node back/server.js"
+    "start": "node back/server.js",
+    "server": "nodemon back/server.js",
+    "front": "npm start --prefix front",
+    "dev": "concurrently \"npm run server \" \"npm run front\""
   },
   "author": "Nirajan Banjade",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.0"
+  }
 }
