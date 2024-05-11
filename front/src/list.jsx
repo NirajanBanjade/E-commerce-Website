@@ -1,4 +1,5 @@
-
+// This file is no longer in use as we are now fetching from backend file List.js
+// we can delete it.
 
 const List=[
     {

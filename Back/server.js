@@ -5,7 +5,7 @@ import express from 'express';
 import List from './data/List.js';
 
 // const express=require('express');   this is common js convention to import express.
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 const app=express();
 
 app.get("/",(req,res)=>{

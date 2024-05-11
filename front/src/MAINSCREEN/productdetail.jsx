@@ -1,19 +1,30 @@
 import React from 'react'
-import List from '../list';
-import { useParams } from 'react-router-dom';
+// import List from '../list';
+import { useEffect,useState } from 'react';
+import { useParams} from 'react-router-dom';
 import { Link} from 'react-router-dom';
 import {Row, Col, Image, ListGroup,Card,Button, ListGroupItem} from 'react-bootstrap'
 import Rating from '../components/rating';
+import axios from 'axios';
 
 
 
 
 const Productdetail = () => {
+  const [product,setProduct]=useState({});
+
+
   const {id: productId}=useParams();
   /* The id:product assing name of id as productId */
-
-  const product=List.find((p) => p._id ===(productId));
-  /*It passes the array object of List as p and match with p_id and url parameter. */
+   
+  useEffect(()=>{
+    const fetchProduct=async()=>{
+      const {data}=await axios.get(`/api/List/${productId}`);
+      setProduct(data);
+    }
+    fetchProduct();
+  },[productId])
+  
   if (!product) {
     console.log('Product not found');
     return <div>Product not found</div>;
