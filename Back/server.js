@@ -3,9 +3,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 import List from './data/List.js';
+import myDB from './config/db.js';
 
 // const express=require('express');   this is common js convention to import express.
 const port = process.env.PORT || 5000;
+myDB();
 const app=express();
 
 app.get("/",(req,res)=>{
