@@ -1,6 +1,6 @@
 const List=[
     {
-        _id: "1",
+
         name:"Apple Earpods Max White Set",
         color: "White",
         image: "/images/headphone1.jpeg",
@@ -15,7 +15,7 @@ const List=[
     },
 
     {
-        _id: "2",
+
         name:"Apple Headphone Max Silver Set",
         color: "Silver",
         image: '/images/headphone2.jpg',
@@ -29,7 +29,7 @@ const List=[
 
     },
     {
-        _id: "3",
+     
         name:"Apple Ipad Mini",
         color: "White",
         image: '/images/ipad3.jpeg',
@@ -43,7 +43,7 @@ const List=[
 
     },
     {
-        _id: "4",
+
         name:"Apple Ipad pro max",
         color: "Brown-Grey",
         image: '/images/ipad4.jpeg',
@@ -57,7 +57,7 @@ const List=[
 
     },
     {
-        _id: "5",
+
         name:"Iphone-14 Pro Max",
         color: "Black",
         image: '/images/iphone145.jpeg',
@@ -71,7 +71,7 @@ const List=[
 
     },
     {
-        _id: "6",
+
         name:"Iphone-15 Pro Max",
         color: "Grey",
         image: '/images/iphone156.jpeg',
@@ -85,7 +85,7 @@ const List=[
 
     },
     {
-        _id: "7",
+
         name:"Mac-Book Air M2 ",
         color: "Grey",
         image: '/images/mac7.jpeg',

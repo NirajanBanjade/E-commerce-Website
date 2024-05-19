@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Product from "./prodmodel";
+// import Product from "./prodmodel";
 
 const ordersSchema= mongoose.Schema({
     User:{
@@ -98,7 +98,7 @@ paidAt:{
     required:true
 },
 receivedAt:{
-    type:date
+    type:Date
 }
 },{
     timestamp:true
