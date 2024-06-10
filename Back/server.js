@@ -1,26 +1,25 @@
 //this is my server's entry point
+import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
-import express from 'express';
-import List from './data/List.js';
 import myDB from './config/db.js';
 
+import productRoutes from './routes/productRoutes.js';
 // const express=require('express');   this is common js convention to import express.
+import { notFound , errorHandler } from './middleware/errormiddle.js';
 const port = process.env.PORT || 5000;
 myDB();
+
 const app=express();
 
-app.get("/",(req,res)=>{
+app.get('/',(req,res)=>{
     res.send("API is working");
 })
 
-app.get('/api/List',(req,res)=>{
-    res.json(List);
-})
+app.use('/api/List',productRoutes);
 
-app.get('/api/List/:id',(req,res)=>{
-    const prod=List.find((p)=>p._id===req.params.id);
-    res.json(prod)});
+app.use(notFound);
+app.use(errorHandler);
 
 // function handle(req,res){
 //     console.log("ehk");

@@ -8,5 +8,5 @@ const myDB=async ()=>{
         console.log(`Error message: ${error}`);
         process.exit(1);
     }
- };
- export default myDB;
+};
+export default myDB;

@@ -46,11 +46,11 @@ const prodSchema= new mongoose.Schema(
             required:true
         },
         reviews:[reviewsSchema],
-        ProductCategory:{
+        category:{
             type:String,
             required:true
         },
-        Price:{
+        price:{
             type:Number,
             required:true,
             default:0
@@ -60,12 +60,12 @@ const prodSchema= new mongoose.Schema(
             required:true,
             default:0
         },
-        NumReviews:{
+        numReviews:{
             type:Number,
             required:true,
             default:0
         },
-        Instock:{
+        countStock:{
             type :Number,
             required:true,
             default:0
