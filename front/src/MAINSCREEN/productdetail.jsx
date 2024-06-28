@@ -6,34 +6,54 @@ import { Link} from 'react-router-dom';
 import {Row, Col, Image, ListGroup,Card,Button, ListGroupItem} from 'react-bootstrap'
 import Rating from '../components/rating';
 import axios from 'axios';
-
+import { useGetProductDetailsQuery } from '../slices/productApislice';
+import { useNavigate } from 'react-router-dom';
+import Loader from '../components/loader';
+import Message from '../components/message';
 
 
 
 const Productdetail = () => {
-  const [product,setProduct]=useState({});
+  // const [product,setProduct]=useState({});
 
 
-  const {id: productId}=useParams();
-  /* The id:product assing name of id as productId */
+  // const {id: productId}=useParams();
+  // /* The id:product assing name of id as productId */
    
-  useEffect(()=>{
-    const fetchProduct=async()=>{
-      const {data}=await axios.get(`/api/List/${productId}`);
-      setProduct(data);
-    }
-    fetchProduct();
-  },[productId])
+  // useEffect(()=>{
+  //   const fetchProduct=async()=>{
+  //     const {data}=await axios.get(`/api/List/${productId}`);
+  //     setProduct(data);
+  //   }
+  //   fetchProduct();
+  // },[productId])
   
-  if (!product) {
-    console.log('Product not found');
-    return <div>Product not found</div>;
+  // if (!product) {
+  //   console.log('Product not found');
+  //   return <div>Product not found</div>;
+  // }
+  
+  let { id: productId } = useParams()
+  let navigate = useNavigate()
+  const [qty, setQty] = useState(1)
+  const { data: product, isLoading, error } = useGetProductDetailsQuery(productId)
+
+  const addToCartHandler = () => {
+    navigate(`/cart/${productId}?qty=${qty}`)
   }
-  
 
   return (
     <>
-        <Link className='btn btn-dark my-1' to='/'> Back?</Link>
+      <Link className='btn btn-dark my-1' to='/'> Back?</Link>
+      {isLoading ? (
+        <Loader/>
+      ):error ?(
+        <Message variant='danger'>
+        {error?.data?.message || error.error}
+        </Message>
+      ): (
+        <>
+
         <Row>
           <Col md={5}>
             <Image src={product.image} alt={product.name} fluid/>
@@ -92,6 +112,9 @@ const Productdetail = () => {
   
 
         </Row>
+        </>
+      )}
+
     </>
   )
 }

@@ -13,7 +13,7 @@ const errorHandler = (err,req,res,next)=>{
     //incorrect id or bad value 
     if((err.name === 'CastError') && (err.kind === ObjectId)){
         message = 'Resource Not Found!';
-        statusCode=404;
+        statusCode = 404;
     }
     res.status(statusCode).json({
         message,
