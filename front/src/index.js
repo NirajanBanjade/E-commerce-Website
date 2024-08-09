@@ -14,6 +14,7 @@ import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom';
+import CartScreen from './MAINSCREEN/CartScreen';
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         path: '/List/:id',
         element: <Productdetail />,
       },
+      {
+        path: '/cart',
+        element: <CartScreen/>,
+      }
     ],
   },
 ]);
