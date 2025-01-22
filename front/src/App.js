@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Outlet } from 'react-router-dom';
 
 
-
 const App = () => {
   return (
     <>
@@ -16,7 +15,8 @@ const App = () => {
         <Container>
      
         <Outlet/>
-      
+  
+        
 
         </Container>
         

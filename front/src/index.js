@@ -15,6 +15,7 @@ import {
   RouterProvider
 } from 'react-router-dom';
 import CartScreen from './MAINSCREEN/CartScreen';
+import Login from './MAINSCREEN/Login';
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <CartScreen/>,
+      }
+      , {
+        path: '/login',
+        element: <Login/>,
       }
     ],
   },

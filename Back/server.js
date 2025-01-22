@@ -7,11 +7,12 @@ import myDB from './config/db.js';
 import productRoutes from './routes/productRoutes.js';
 // const express=require('express');   this is common js convention to import express.
 import { notFound , errorHandler } from './middleware/errormiddle.js';
-const port = process.env.PORT || 5000;
+import cors from 'cors';
+const port = process.env.PORT || 5001;
 myDB();
 
 const app=express();
-
+app.use(cors());
 app.get('/',(req,res)=>{
     res.send("API is working");
 })
