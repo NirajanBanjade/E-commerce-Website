@@ -8,7 +8,7 @@ import productRoutes from './routes/productRoutes.js';
 // const express=require('express');   this is common js convention to import express.
 import { notFound , errorHandler } from './middleware/errormiddle.js';
 import cors from 'cors';
-const port = process.env.PORT || 5001;
+const port = process.env.PORT;
 myDB();
 
 const app=express();
