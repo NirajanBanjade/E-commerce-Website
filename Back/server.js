@@ -29,9 +29,10 @@ app.use(errorHandler);
 // }
 // apply.get('/',handle);
 
-app.listen(port,()=>
-    console.log(`Server is running on ${port}`)
-)
+// app.listen(port,()=>
+//     console.log(`Server is running on ${port}`)
+// )
+export default app;
 // app.listen(port,()=>
 //     console.log(`Server is running on 5001`)
 // ).on('error',(error)=>{
