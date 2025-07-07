@@ -23,6 +23,9 @@ app.use('/api/List',productRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
+app.use(express.json()); // ✅ Required to parse JSON requests
+app.use(express.urlencoded({ extended: false })); // ✅ Allows form data parsing
+
 
 // function handle(req,res){
 //     console.log("ehk");

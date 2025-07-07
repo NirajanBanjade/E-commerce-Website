@@ -15,7 +15,6 @@ const App = () => {
         <Container>
      
         <Outlet/>
-  
         
 
         </Container>
